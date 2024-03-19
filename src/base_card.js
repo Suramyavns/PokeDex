@@ -13,7 +13,7 @@ function Card(props){
     return(
         <div className='card'>
             <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonData.id}.svg`} alt={`${pokemonData.name}'s`} />
-            <h2>{pokemonData.name[0].toUpperCase()+pokemonData.name.slice(1)}</h2>
+            <h2>{pokemonData.name}</h2>
             <button className='view-btn'>View</button>
         </div>
     )

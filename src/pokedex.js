@@ -3,6 +3,7 @@ import pokemon_logo from './Pokemon_Logo.png'
 import './pokedex.css'
 import Card from './base_card.js'
 import axios from 'axios';
+import 'font-awesome/css/font-awesome.min.css';
 const client = axios.create({
     baseURL: "https://pokeapi.co/api/v2/",
 });
@@ -29,6 +30,9 @@ function Pokedex(){
                         })
                     }
                 </div>
+            </div>
+            <div className='footer'>
+                <h2>Made with <i className='fa fa-heart' style={{color:'red'}}></i> by Suramya Didwania</h2>
             </div>
         </div>
     )
