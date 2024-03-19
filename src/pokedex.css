@@ -1,0 +1,81 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.header>img{
+    height: 30vh;
+    padding-top: 10vh;
+}
+.header>form{
+    position: absolute;
+    top: 20vh;
+}
+.header>form>input{
+    border-radius: 20px;
+    padding: 10px;
+    width: 300px;
+    border: 1px solid black;
+}
+.pokemons{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 200px;
+}
+.pokemon-grid{
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.card{
+    width: 250px;
+    aspect-ratio: 0.7;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: #3D3B30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: aliceblue;
+    font-size: 160%;
+}
+.card>img{
+    height: 10vh;
+}
+.view-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 120px;
+    background-color: #C2D3CD;
+    border-radius: 50px;
+    border: 1px solid black;
+    box-shadow: 2px 2px black;
+    transition: ease 0.5s;
+}
+.view-btn:hover{
+    transform: scale(1.2);
+    transition: ease 0.5s;
+}
+.view-btn:active{
+    transform: scale(0.8);
+}
+
