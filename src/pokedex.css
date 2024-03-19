@@ -45,7 +45,7 @@
 }
 .card{
     width: 250px;
-    aspect-ratio: 0.7;
+    height: calc(250/0.7);
     border: 1px solid black;
     border-radius: 25px;
     background-color: #3D3B30;
