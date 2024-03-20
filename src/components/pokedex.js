@@ -9,7 +9,7 @@ function Pokedex(){
     const [pokemonData,setPokemonData] = useState([]);
     const [nextUrl,setNextUrl] = useState();
     const [prevUrl,setPrevUrl] = useState();
-    const [url,setUrl] = useState("https://pokeapi.co/api/v2/pokemon?limit=21");
+    const [url,setUrl] = useState("https://pokeapi.co/api/v2/pokemon?limit=24");
     const [loading,setloading] = useState(true);
     const getPokemons = async()=>{
         setloading(true);
