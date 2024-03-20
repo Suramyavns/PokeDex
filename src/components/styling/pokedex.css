@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
 }
 .header>img{
     height: 30vh;
@@ -29,10 +29,10 @@
 }
 .pokemons{
     width: 100vw;
-    height: 50vh;
+    height: 100%;
     display: flex;
-    overflow-y: scroll;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     position: relative;
     padding-bottom: 10vh;
@@ -73,6 +73,9 @@
 .card>img{
     height: 10vh;
 }
+.card>h2{
+    font-size: 3.5vh;
+}
 .view-btn{
     display: flex;
     align-items: center;
@@ -85,11 +88,11 @@
     box-shadow: 2px 2px black;
     transition: ease 0.5s;
 }
-.view-btn:hover{
+.view-btn:hover,.nav-btn:hover{
     transform: scale(1.2);
     transition: ease 0.5s;
 }
-.view-btn:active{
+.view-btn:active,.nav-btn:active{
     transform: scale(0.8);
 }
 .footer{
@@ -102,6 +105,23 @@
     position: relative;
     bottom: 0px;
     text-align: center;
-    margin-top: 50px;
 }
-
+.navs{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: orangered;
+    color: white;
+    font-size: 1.2em;
+    margin: 0px 20px;
+    border: 1px solid black;
+    transition: ease 0.5s;
+}

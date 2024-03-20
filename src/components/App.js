@@ -1,4 +1,4 @@
-import './App.css';
+import './styling/App.css';
 import Pokedex from './pokedex';
 
 function App() {
