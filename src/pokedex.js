@@ -1,25 +1,36 @@
-import { useEffect, useState } from 'react';
 import pokemon_logo from './Pokemon_Logo.png'
 import './pokedex.css'
 import Card from './base_card.js'
 import axios from 'axios';
 import 'font-awesome/css/font-awesome.min.css';
+import React, { useState } from "react";
+
 const client = axios.create({
     baseURL: "https://pokeapi.co/api/v2/",
 });
-function Pokedex(){
-    const [pokemons,setPokemons] = useState([]);
-    useEffect(()=>{
-        client.get("pokemon?limit=51").then(response=>{
-            setPokemons(response.data.results);
-        })
+
+let initialVals = []
+client.get("pokemon?limit=250&offset=0").then(response=>{
+    initialVals = response.data.results;
+}).catch(e=>{console.log(e)});
+
+function Pokemonswithname(name){
+    if(name===""){
+        return initialVals;
+    }
+    return initialVals.filter(p=>{
+        return p.name.toLowerCase().startsWith(name.toLowerCase());
     })
+}
+
+function Pokedex(){   
+    const [pokemons,setpokemons] = useState(initialVals);
     return(
         <div className='container'>
             <div className="header">
                 <img src={pokemon_logo} alt="pokemon-logo"></img>
                 <form method='get'>
-                    <input type='text' placeholder='Search for pokemon,types or generations...' />
+                    <input type='text' placeholder='Search for pokemons...' onInput={e=>setpokemons(Pokemonswithname(e.target.value))} />
                 </form>
             </div>
             <div className="pokemons">

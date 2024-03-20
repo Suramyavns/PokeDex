@@ -6,9 +6,12 @@ const client = axios.create();
 function Card(props){
     const [pokemonData,setPokemonData] = useState({});
     useEffect(()=>{
-        client.get(props.url).then(response=>{
-            setPokemonData(response.data);
-        })
+        const fetchPokemonData = async ()=>{
+            await client.get(props.url).then(response=>{
+                setPokemonData(response.data);
+            }).catch(error=>{console.log(error)});
+        }
+        fetchPokemonData();
     })
     return(
         <div className='card'>
